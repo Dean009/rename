@@ -1,10 +1,10 @@
 import os, string
 
-location = "/home/hypuh/Documents/The Wire Season 1"
+location = os.getcwd()
 for root, dirs, files in os.walk(location):
 	total = 0
 	for filename in files:
-		if '.mkv' in filename or '.srt' in filename:
+		if '.mkv' in filename or '.srt' in filename or '.py' in filename:
 			currentFile = []
 			currentFile.append(filename)
 			strcurfile = str(currentFile)
@@ -31,17 +31,4 @@ for root, dirs, files in os.walk(location):
 			total += 1
 			print("File Deleted:   " + filename)
 			continue
-
-
-				# Directory 
-				#directory = "The Wire Season 01" 
-				# Parent Directory path 
-				#parent_dir = os.getcwd()
-				# Path 
-				#path = os.path.join(parent_dir, directory) 
-				# Create the directory 
-				#os.mkdir(path) 
-				#print("Directory '% s' created" % directory) 
-				#os.rename(location, filename)
-
 print("Total of: " + str(total) + " files deleted")
