@@ -24,11 +24,9 @@ for root, dirs, files in os.walk(location):
 				newname = 'The Wire ' + 's' + '0' + newseason + 'e' + newepisode + ' ' + newtitle
 				path = os.path.join(location, filename)
 				os.rename(filename, newname)
-				continue
 		else:
 			path = os.path.join(location, filename) 
 			os.remove(path)
 			total += 1
 			print("File Deleted:   " + filename)
-			continue
 print("Total of: " + str(total) + " files deleted")
